@@ -1,4 +1,4 @@
-# ImHere - Aplicativo de cadastro de Usuários com React Native, Styled Components e Expo
+# ImHere - Aplicativo de cadastro de usuários com React Native, Styled Components e Expo
 
 Bem-vindo ao repositório do ImHere, uma aplicação simples para cadastrar usuários em uma lista, desenvolvida com React Native, Styled Components e Expo. Cujo o objetivo é dar inicio ao meu aprendizado em desenvolvimento Mobile.
 
