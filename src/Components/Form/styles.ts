@@ -3,7 +3,7 @@ import styled from 'styled-components/native'
 export const Container = styled.View`
    margin: 32px 24px;
    flex-direction: row;
-   gap: 8;
+   gap: 8px;
 `
 
 export const Input = styled.TextInput`

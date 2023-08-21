@@ -7,11 +7,13 @@ export const Container = styled.View`
 
 export const Title = styled.Text`
     font-size: 24px;
+    font-weight: 700;
     color: #FDFCFE;
 `
 
 export const Description = styled.Text`
     font-size: 16px;
+    font-weight: 400;
 
     color: #6B6B6B;
 

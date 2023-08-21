@@ -8,7 +8,7 @@ export function Participant({description}: ParticipantProps) {
     return (
         <Container>
             <Name>Eduardo Gomes</Name>
-            <Button><Simbol>&#9866;</Simbol></Button>
+            <Button><Simbol>&#x268A;</Simbol></Button>
         </Container>
     )
 }
