@@ -1,22 +1,15 @@
 import styled from 'styled-components/native'
 
 export const Container = styled.View`
-   margin: 32px 24px;
-   flex-direction: row;
-   gap: 8;
+    flex-direction: row;
+    justify-content: space-between;
 `
-
-export const Input = styled.TextInput`
-   flex: 1; 
-   background-color: #1F1E25;
-   border-radius: 4px ;
-   padding: 16px 16px;
-   color: #FFF;
-
+export const Name = styled.Text`
+    color: #FDFCFE
+    
 `
-
 export const Button = styled.TouchableOpacity`
-    background-color: #31CF67;
+    background-color: #E23C44;
     color: white;
     justify-content: center;
     align-items: center;
