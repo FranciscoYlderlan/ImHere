@@ -21,7 +21,7 @@ export const Button = styled.TouchableOpacity`
     justify-content: center;
     align-items: center;
     border-radius: 4px;
-    padding: 16px 20px;
+    padding: 20px;
 `
 
 export const Simbol = styled.Text`

@@ -11,3 +11,11 @@ export const Title = styled.Text`
     font-weight: 700;
     margin: 16px 24px;
 `
+export const Message = styled.Text`
+    color: #FDFCFE;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 14px;
+    width: 290px;
+    border: solid 1px red;
+`

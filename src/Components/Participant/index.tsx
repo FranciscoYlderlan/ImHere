@@ -1,14 +1,17 @@
 import { Container, Button, Simbol, Name } from "./styles";
 
+import { Entypo } from '@expo/vector-icons'; 
+
 interface ParticipantProps {
-    description: string,
+    name: string,
 } 
 
-export function Participant({description}: ParticipantProps) {
+export function Participant({name}: ParticipantProps) {
     return (
         <Container>
-            <Name>Eduardo Gomes</Name>
-            <Button><Simbol>&#x268A;</Simbol></Button>
+            <Name>{name}</Name>
+
+            <Button><Entypo name="minus" size={24} color="white" /></Button>
         </Container>
     )
 }
