@@ -17,5 +17,4 @@ export const Message = styled.Text`
     text-align: center;
     font-size: 14px;
     width: 290px;
-    border: solid 1px red;
 `

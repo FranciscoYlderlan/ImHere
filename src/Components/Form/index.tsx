@@ -1,16 +1,14 @@
 import { Container, Input, Button, Simbol } from "./styles";
 import { useState } from "react";
 interface FormProps {
-    addParticipant: () => void;
+    addParticipant: () => void,
+    //participants: Array<string> //ou string[];
 }
 
 
-export function Form({ addParticipant } : FormProps) {
+export function Form({ addParticipant, participants } : FormProps) {
     const [name, setName] = useState()
     
-    function handleAddParticipant() {
-        addParticipant(prevState => [name,...prevState])
-    }
     return (
         <Container>
             <Input 
@@ -19,7 +17,7 @@ export function Form({ addParticipant } : FormProps) {
                 value={name}
                 onChangeText={text => setName(text)}
             />
-            <Button onPress={handleAddParticipant}><Simbol>&#10010;</Simbol></Button>
+            <Button onPress={() => handleAddParticipant(name)}><Simbol>&#10010;</Simbol></Button>
         </Container>
     )   
 }
