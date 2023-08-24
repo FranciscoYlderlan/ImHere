@@ -1,6 +1,6 @@
 import { Container, Title, Message } from "./styles";
 
-import { Text, FlatList } from "react-native";
+import { Text, FlatList, Alert } from "react-native";
 import { Header } from '../../Components/Header'
 import { Form } from '../../Components/Form'
 import { Participant } from "../../Components/Participant";
@@ -10,23 +10,25 @@ import { useState } from "react";
 export function Home() {
     const [participants, setParticipants] = useState<string[]>([])
     
-    function handleAddParticipant(name) {
+    function handleAddParticipant(name: string) {
         if(participants.includes(name)){
             return Alert.alert('Participante já cadastrado.', 'Já existe um participante na lista com esse nome.')
         }
         setParticipants(prevState => [name,...prevState])
     }
 
-    function handleRemoveParticipant(name) {
-        Alert.alert('Remover', 'Deseja remover este participante?',[{
-            text:'Sim',
-            OnPress: () => setParticipants(prevState => 
-                prevState.filter(participant => participant !== name)
-            )
-        },{
-            text: "Não",
-            style:"cancel"
-        }])
+    function handleRemoveParticipant(name: string) {
+        Alert.alert('Remover', 'Deseja remover este participante?',[
+            {
+                text: 'Sim',
+                onPress: () => setParticipants(prevState => 
+                    prevState.filter(participant => participant !== name)
+                )
+            },{
+                text: "Não",
+                style:"cancel"
+            }
+        ])
     }
 
 
@@ -39,10 +41,10 @@ export function Home() {
             <FlatList
                 data={participants}
                 keyExtractor={name => name}
-                renderItem={({name}) => (
+                renderItem={({item}) => (
                     <Participant 
-                        name={name} 
-                        handleRemove={() => handleRemoveParticipant(name)}
+                        name={item} 
+                        handleRemove={() => handleRemoveParticipant(item)}
                     />
                 )}
                 showsVerticalScrollIndicator={false}

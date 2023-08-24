@@ -17,7 +17,7 @@ export function Form({ addParticipant, participants } : FormProps) {
                 value={name}
                 onChangeText={text => setName(text)}
             />
-            <Button onPress={() => handleAddParticipant(name)}><Simbol>&#10010;</Simbol></Button>
+            <Button onPress={() => addParticipant(name)}><Simbol>&#10010;</Simbol></Button>
         </Container>
     )   
 }
